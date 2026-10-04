@@ -1,0 +1,18 @@
+SELECT 
+	*
+FROM EMPLOYEES;
+
+-----------------------------
+
+SELECT 
+	NAME,
+	LASTNAME,
+	CITY
+FROM EMPLOYEES
+
+----------------------------
+
+SELECT 
+	* 
+FROM Employees 
+WHERE birthdate = '1998-01-01';
