@@ -1,0 +1,61 @@
+SELECT
+TrackId,
+Milliseconds
+from Tracks
+where Milliseconds >= 5000000;
+
+---
+
+select
+count(*)
+from invoices
+where total between 5 and 15;
+
+---
+
+select 
+*
+from Customers
+where State IN ('RJ', 'DF', 'AB', 'BC', 'AC', 'WA', 'NY')
+and FirstName = "Jack";
+
+---
+
+SELECT *
+FROM invoices
+WHERE total BETWEEN 1 AND 5
+AND CustomerId IN (56, 58);
+
+---
+
+SELECT count(Name)
+FROM Tracks
+WHERE Name LIKE 'all%';
+
+---
+
+SELECT
+*
+from Customers
+where Email LIKE 'J%gmail.com';
+
+---
+
+SELECT *
+FROM invoices
+WHERE BillingCity in ('Brasília', 'Edmonton', 'Vancouver')
+order by InvoiceId desc;
+
+---
+
+SELECT CustomerId, COUNT(*) AS total
+FROM invoices
+GROUP BY CustomerId
+ORDER BY total DESC;
+
+---
+
+SELECT AlbumId, COUNT(*) AS number_of_tracks
+FROM Tracks
+GROUP BY AlbumId
+HAVING COUNT(*) >= 12;
